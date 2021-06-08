@@ -1,24 +1,32 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 //create your first component
-export function Home() {
+export const Home = () => {
+	const [count, setCount] = useState(0);
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		if (count==1) {
+			<div>Hola</div>
+		} else if (count==2){
+
+		} else if (count==3){
+			
+		} else {
+			<div className="text-center d-flex justify-content-center mt-5">
+				<div className="bg-dark rounded p-2">
+					<div
+						className="bg-danger rounded-circle"
+						style={{ width: "10vw", height: "10vw" }}></div>
+					<div
+						className="bg-warning rounded-circle"
+						style={{ width: "10vw", height: "10vw" }}></div>
+					<div
+						className="bg-success rounded-circle"
+						style={{ width: "10vw", height: "10vw" }}></div>
+				</div>
+			</div>
+
+		};
+
 	);
 }
